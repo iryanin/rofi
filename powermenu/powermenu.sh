@@ -9,10 +9,6 @@
 #
 ## style-1   style-2   style-3   style-4   style-5
 
-# Current Theme
-dir="$HOME/.config/rofi/powermenu/type-1"
-theme='style-5'
-
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
 host=`hostname`
@@ -31,7 +27,7 @@ rofi_cmd() {
 	rofi -dmenu \
 		-p "$host" \
 		-mesg "Uptime: $uptime" \
-		-theme ${dir}/${theme}.rasi
+		-theme ~/.config/rofi/powermenu/powermenu.rasi
 }
 
 # Confirmation CMD
@@ -44,7 +40,7 @@ confirm_cmd() {
 		-dmenu \
 		-p 'Confirmation' \
 		-mesg 'Are you Sure?' \
-		-theme ${dir}/${theme}.rasi
+		-theme ~/.config/rofi/powermenu/powermenu.rasi
 }
 
 # Ask for confirmation
