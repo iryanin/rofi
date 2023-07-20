@@ -5,9 +5,6 @@
 #
 ## Rofi   : Power Menu
 #
-## Available Styles
-#
-## style-1   style-2   style-3   style-4   style-5
 
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
@@ -62,7 +59,7 @@ run_cmd() {
 		elif [[ $1 == '--reboot' ]]; then
 			systemctl reboot
 		elif [[ $1 == '--suspend' ]]; then
-			mpc -q pause
+			# mpc -q pause
 			amixer set Master mute
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
